@@ -1,11 +1,58 @@
-<!DOCTYPE html>
+{% load static %}
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Hello Django</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h2>Mielenie bedoka!!!</h2>
+    <nav>
+      <div class="container nav-wrapper">
+        <a href="/" class="brand-logo">Lo2 Gdynia market</a>
+        <ul id="nav-mobile" class="right">
+          <li><a href="/">Strona główna</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2 style="text-align: center;">
+        Czego szukasz na markecie dla uczniów IILO w Gydni?
+      </h2>
+      <div class="row">
+        <div class="col s4">
+          <div class="center">
+            <i class="large material-icons" style="color: #ee6e73;">flash_on</i>
+            <p>Szybko działa</p>
+            <p class="light center">
+              Szybkośc działania gwarantowana dzięki technologi Django
+            </p>
+          </div>
+
+          <div class="col s4">
+            <div class="center">
+              <i class="large material-icons" style="color: orange;">camera</i>
+              <p>Filtruj wyszukiwania</p>
+              <p class="light center">
+                Wyszukaj co tylko zechcesz!
+              </p>
+            </div>
+        </div>
+      </div>
+
+      {% block content %} {% endblock content %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </div>
   </body>
 </html>
